@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion project.hasProperty('compileSdkVersion') ? project.compileSdkVersion : 23
-    buildToolsVersion project.hasProperty('buildToolsVersion') ? project.buildToolsVersion : "23.0.1"
+    compileSdkVersion project.hasProperty('compileSdkVersion') ? project.compileSdkVersion : 28
+    buildToolsVersion project.hasProperty('buildToolsVersion') ? project.buildToolsVersion : "28.0.3"
 
     defaultConfig {
-        minSdkVersion project.hasProperty('minSdkVersion') ? project.minSdkVersion : 16
-        targetSdkVersion project.hasProperty('targetSdkVersion') ? project.targetSdkVersion : 22
+        minSdkVersion project.hasProperty('minSdkVersion') ? project.minSdkVersion : 21
+        targetSdkVersion project.hasProperty('targetSdkVersion') ? project.targetSdkVersion : 27
         versionCode 1
         versionName "1.0"
         ndk {
@@ -16,6 +16,6 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile "com.mixpanel.android:mixpanel-android:5.3.0"
+    implementation 'com.facebook.react:react-native:+'
+    implementation "com.mixpanel.android:mixpanel-android:5.3.0"
 }
